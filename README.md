@@ -1,6 +1,5 @@
 # AI Data Analyst
-T
-his is a Streamlit-based AI-powered data analyst that allows users to upload CSV or Excel files, ask natural language questions about the data, and receive SQL query responses with results.
+This is a Streamlit-based AI-powered data analyst that allows users to upload CSV or Excel files, ask natural language questions about the data, and receive SQL query responses with results.
 
 You can access the live version of the app on Streamlit Cloud:
 [**AI Data Analyst App**](https://ai-data-analyst-kymnzcd4bqwb7yrtbq84n2.streamlit.app/)
