@@ -55,15 +55,7 @@ def return_sql_response(sql_query, conn):
 def main():
     st.set_page_config(page_title="AI Data Analyst", layout="wide")
     
-    with st.sidebar:
-        st.header("Settings")
-        api_key = st.text_input("Enter Groq API Key", type="password",help="Enter your GROQ API key to access the service")
 
-        if not api_key:
-            st.warning("⚠️ Please enter your Groq API Key to proceed")
-            return
-
-        st.success("API Key accepted!")
         
     
     st.markdown("""
@@ -88,6 +80,16 @@ def main():
     """, unsafe_allow_html=True)
     
     st.markdown("<h1 class='title-text'>AI Data Analyst</h1>", unsafe_allow_html=True)
+
+    with st.sidebar:
+        st.header("Settings")
+        api_key = st.text_input("Enter Groq API Key", type="password",help="Enter your GROQ API key to access the service")
+
+        if not api_key:
+            st.warning("⚠️ Please enter your Groq API Key to proceed")
+            return
+
+        st.success("API Key accepted!")
     
     conn = initialize_database()
     uploaded_file = st.file_uploader("Upload CSV or Excel file", type=["csv", "xls", "xlsx"], help="Upload your dataset here")
